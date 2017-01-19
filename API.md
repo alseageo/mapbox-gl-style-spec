@@ -43,14 +43,14 @@ of the input.
 
 
 
-**Returns** `Array.<Layer>`, 
+**Returns** `Array.<Layer>`,
 
 
-### `diffStyles([before], after)`
+### `diff([before], after)`
 
-Diff two stylesheet
+Diff two stylesheets.
 
-Creates semanticly aware diffs that can easily be applied at runtime.
+Creates semantically aware diffs that can easily be applied at runtime.
 Operations produced by the diff closely resemble the mapbox-gl-js API. Any
 error creating the diff will fall back to the 'setStyle' operation.
 
@@ -70,7 +70,7 @@ Example diff:
 
 
 
-**Returns** `rra`, list of changes
+**Returns** `Array`, list of changes
 
 
 ### `format(style, [space])`
@@ -127,7 +127,7 @@ input layers.
 
 
 
-**Returns** `Array.<Array.<Layer>>`, 
+**Returns** `Array.<Array.<Layer>>`,
 
 
 ### `migrate(style)`
@@ -177,7 +177,7 @@ Validate a Mapbox GL style against the style specification.
 ```
 
 
-**Returns** `Array.<ValidationError|ParsingError>`, 
+**Returns** `Array.<ValidationError|ParsingError>`,
 
 
 ### `validateStyleMin(style, [styleSpec])`
@@ -204,7 +204,7 @@ and legacy style specifications.
 ```
 
 
-**Returns** `Array.<ValidationError>`, 
+**Returns** `Array.<ValidationError>`,
 
 
 ### `createFilter(filter)`
@@ -223,5 +223,3 @@ passes its test.
 
 
 **Returns** `Function`, filter-evaluating function
-
-
